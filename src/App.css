@@ -1,8 +1,13 @@
 * {
-    justify-content: center;
-    text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+header {
+  text-decoration: solid;
+  background: orange;
+  width: 100%;
 }
 .winnie-image {
-    width: 250px;
-    height: 300px;
+  width: 250px;
+  height: 300px;
 }

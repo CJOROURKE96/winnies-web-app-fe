@@ -1,5 +1,11 @@
+import { AppBar } from '@mui/material';
+
 const Header = () => {
-  return <h1> Winnie's Web App! </h1>;
+  return (
+    <AppBar position="relative">
+      <h1 className="header"> Winnie's Web App! </h1>
+    </AppBar>
+  );
 };
 
 export default Header;
