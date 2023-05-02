@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { getActivities } from '../utils/api';
 
@@ -21,8 +21,19 @@ const Activities = () => {
       <Grid>
         {activities.map((activity) => {
             return (
-            <Typography>{activity.location}</Typography>
-            )
+              <Card key={activity.activity_id} className="activities-card">
+                <Typography>{activity.location}</Typography>
+                <CardMedia 
+                className='activity-image'
+                image={activity.image}
+                title="Winnie doing an activity"/>
+                <CardContent>
+                    <Typography>
+                        {activity.activity}
+                    </Typography>
+                </CardContent>
+              </Card>
+            );
         })}
       </Grid>
     );

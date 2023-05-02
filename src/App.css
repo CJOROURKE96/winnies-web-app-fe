@@ -4,9 +4,12 @@
 }
 header {
   text-decoration: solid;
-  background: orange;
   width: 100%;
   position: relative;
+}
+.header-link {
+  text-decoration: none;
+  color: white;
 }
 .winnie-image {
   display: block;
@@ -26,4 +29,10 @@ header {
 }
 .activities-link {
   text-decoration: none;
+  color: white;
+}
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
