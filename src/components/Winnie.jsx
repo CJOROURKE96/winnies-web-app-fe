@@ -7,8 +7,8 @@ import {
   CardMedia,
   Grid,
   Typography,
+  Button
 } from '@mui/material';
-import { Button } from '@mui/base';
 
 const WinnieCard = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,16 +27,14 @@ const WinnieCard = () => {
   } else {
     return (
       <Grid
-        spacing={3}
-        direction="column"
         justifyContent="center"
         alignItems="center"
       >
         {winnieData.map((data) => {
           return (
-            <Card sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Card key={data.name} className='winnieCard'>
               <CardMedia
-                sx={{ pt: '56.25%' }}
+                className='winnie-image'
                 image={data.image}
                 title="Winnie the dog smiling"
               />
@@ -49,7 +47,7 @@ const WinnieCard = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Activity</Button>
+                <Button variant='contained'>Activity</Button>
               </CardActions>
             </Card>
           );

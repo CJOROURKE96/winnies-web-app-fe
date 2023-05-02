@@ -8,7 +8,6 @@ export const getWinnie = () => {
   return winniesAPI
   .get('/winnie')
   .then(({data}) => {
-    console.log(data, "<-- DATA")
     return data
   })
 }

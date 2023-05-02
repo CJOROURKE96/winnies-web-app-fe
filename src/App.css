@@ -6,8 +6,21 @@ header {
   text-decoration: solid;
   background: orange;
   width: 100%;
+  position: relative;
 }
 .winnie-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 250px;
-  height: 300px;
+  height: 250px;
+}
+.winnieCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.text-box {
+  margin: 10px;
+  padding: 25px;
 }
