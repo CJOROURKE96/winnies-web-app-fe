@@ -9,6 +9,8 @@ import {
   Typography,
   Button
 } from '@mui/material';
+import Welcome from './Welcome';
+import { Link } from 'react-router-dom';
 
 const WinnieCard = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,9 +34,9 @@ const WinnieCard = () => {
       >
         {winnieData.map((data) => {
           return (
-            <Card key={data.name} className='winnieCard'>
+            <Card key={data.name} className="winnieCard">
               <CardMedia
-                className='winnie-image'
+                className="winnie-image"
                 image={data.image}
                 title="Winnie the dog smiling"
               />
@@ -47,11 +49,14 @@ const WinnieCard = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button variant='contained'>Activity</Button>
+                <Button variant="contained">
+                  <Link className='activities-link' to="/activities">Activity</Link>
+                </Button>
               </CardActions>
             </Card>
           );
         })}
+        <Welcome />
       </Grid>
     );
   }

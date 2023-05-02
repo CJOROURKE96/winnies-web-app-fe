@@ -2,7 +2,7 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import Header from './components/Header';
 import WinnieCard from './components/Winnie';
-import Welcome from './components/Welcome';
+import Activities from './components/Activities';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<WinnieCard />}></Route>
+          <Route path='/activities' element={<Activities/>}></Route>
         </Routes>
-          <Welcome />
       </main>
     </div>
   );

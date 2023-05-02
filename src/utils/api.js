@@ -11,3 +11,11 @@ export const getWinnie = () => {
     return data
   })
 }
+
+export const getActivities = () => {
+  return winniesAPI
+  .get('/activities')
+  .then(({data}) => {
+    return data
+  })
+}

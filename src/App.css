@@ -24,3 +24,6 @@ header {
   margin: 10px;
   padding: 25px;
 }
+.activities-link {
+  text-decoration: none;
+}
