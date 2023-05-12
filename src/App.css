@@ -43,3 +43,16 @@ header {
   width: 250px;
   height: 250px;
 }
+.new-activity-form {
+  padding: 15px;
+  margin: 15px;
+}
+.new-location {
+  padding: 5px
+}
+.new-activity {
+  padding: 5px;
+}
+.new-image-URL {
+  padding: 5px;
+}
