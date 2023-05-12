@@ -1,6 +1,7 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { getActivities } from '../utils/api';
+import AddActivity from './Add-Activity';
 
 const Activities = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ const Activities = () => {
   } else {
     return (
       <Grid>
+        <AddActivity activities={activities} setActivities={setActivities}/>
         {activities.map((activity) => {
             return (
               <Card key={activity.activity_id} className="activities-card">

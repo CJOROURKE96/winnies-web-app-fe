@@ -19,3 +19,13 @@ export const getActivities = () => {
     return data
   })
 }
+
+export const postActivity = (location, activity, image) => {
+  const postBody = {
+    location: location,
+    activity: activity,
+    image: image
+  }
+    return winniesAPI
+    .post('/activities', postBody)
+}
