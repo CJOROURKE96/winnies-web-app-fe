@@ -1,11 +1,13 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getActivities } from '../utils/api';
 import AddActivity from './Add-Activity';
 
 const Activities = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activities, setActivities] = useState([]);
+  const {activity_id} = useParams()
 
   useEffect(() => {
     setIsLoading(true);
@@ -13,7 +15,7 @@ const Activities = () => {
       setActivities(activities);
       setIsLoading(false);
     });
-  }, []);
+  }, [activity_id]);
 
   if (isLoading) {
     return <p>Loading Winnie's Web App ... </p>;
