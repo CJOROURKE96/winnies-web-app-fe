@@ -9,10 +9,12 @@ const AddActivity = (activities, setActivities) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    postActivity(newLocation, newActivity, newImage).then(({ data }) => {
+    postActivity(newLocation, newActivity, newImage).then(() => {
       setActivities([newLocation, newActivity, newImage, ...activities]);
     });
-    setNewActivity('');
+    setNewActivity('')
+    setNewImage('')
+    setNewLocation('');
   };
 
   return (
