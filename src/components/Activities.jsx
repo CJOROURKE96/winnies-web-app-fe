@@ -1,6 +1,5 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { getActivities } from '../utils/api';
 import AddActivity from './Add-Activity';
 
